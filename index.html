@@ -199,6 +199,92 @@ box-shadow:6px 6px #000;
 }
 .skills-box ul{list-style:none;padding:0;font-size:11px}
 .skills-box li{padding:8px 0}
+.exp-timeline{
+position:relative;
+margin-top:40px;
+padding-left:30px;
+}
+.exp-timeline::before{
+content:'';
+position:absolute;
+left:0;
+top:0;
+bottom:0;
+width:6px;
+background:repeating-linear-gradient(
+  to bottom,
+  var(--brick) 0px,
+  var(--brick) 20px,
+  var(--brickDark) 20px,
+  var(--brickDark) 40px
+);
+}
+.exp-card{
+background:#fff;
+border:4px solid #000;
+box-shadow:6px 6px #000;
+padding:25px;
+margin-bottom:35px;
+position:relative;
+transition:.25s;
+}
+.exp-card:hover{transform:translateX(6px)}
+.exp-card::before{
+content:'▶';
+position:absolute;
+left:-28px;
+top:20px;
+color:var(--brick);
+font-size:14px;
+}
+.exp-header{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:15px;
+}
+.exp-company{
+font-size:13px;
+color:var(--brick);
+}
+.exp-date{
+background:var(--brick);
+color:white;
+padding:4px 10px;
+font-size:9px;
+box-shadow:3px 3px var(--brickDark);
+}
+.exp-role{
+font-size:11px;
+color:#444;
+margin-bottom:15px;
+}
+.exp-points{
+list-style:none;
+padding:0;
+margin:0;
+font-size:9px;
+line-height:2;
+}
+.exp-points li::before{
+content:'★ ';
+color:var(--coin);
+}
+.exp-tags{
+margin-top:15px;
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+.exp-tag{
+background:var(--brickDark);
+color:var(--coin);
+padding:4px 10px;
+font-size:8px;
+border:2px solid var(--coin);
+}
 .contact-card{
 max-width:500px;
 margin:auto;
@@ -287,6 +373,7 @@ animation:starCycle 30s infinite;
 <nav>
 <a href="#home">HOME</a>
 <a href="#about">ABOUT</a>
+<a href="#experience">EXPERIENCE</a>
 <a href="#projects">PROJECTS</a>
 <a href="#skills">SKILLS</a>
 <a href="#contact">CONTACT</a>
@@ -311,11 +398,63 @@ animation:starCycle 30s infinite;
 <div class="about-card">
 Software Engineer with 3+ years of experience in Java full-stack development, including Spring Boot, along with strong exposure to technical support and production issue resolution. Experienced in building and maintaining scalable applications, working with tools like Git and Jira, and across platforms such as Windows and Linux.
 <br><br>
-Currently transitioning toward C++ development with a broad interest in system-level programming, performance optimization, and problem-solving. I have hands-on experience with OpenGL, real-time rendering, and foundational concepts of game engine programming. I also use Blender for 3D modeling to support graphics-related projects.
+Currently transitioning toward C++ development with a broad interest in system-level programming, performance optimization, and problem-solving. I have hands-on experience with OpenGL, real-time rendering, and foundational concepts of game engine programming. I also use Blender for 3D modeling to support graphics-related projects. I am open to a wide range of C++ opportunities and focused on writing efficient, high-performance code, with a continuous drive to deepen my understanding of low-level systems and complex software design.
 </div>
 <div class="pixel-monitor" id="terminal">&gt; booting developer profile...</div>
 </div>
 </section>
+<section id="experience">
+<h2>EXPERIENCE</h2>
+<div class="exp-timeline">
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <span class="exp-company">🏢 CAPGEMINI</span>
+      <span class="exp-date">Aug 2022– PRESENT</span>
+    </div>
+    <div class="exp-role">⚔️ ASSOCIATE CONSULTANT — PUNE</div>
+    <ul class="exp-points">
+      <li>Working as Associate Consultant in software development and technical consulting.</li>
+      <li>Applying Java/C++ and Spring Boot expertise to enterprise-level solutions.</li>
+    </ul>
+    <div class="exp-tags">
+      <span class="exp-tag">JAVA</span>
+      <span class="exp-tag">C++</span>
+      <span class="exp-tag">SPRING BOOT</span>
+      <span class="exp-tag">CONSULTING</span>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <span class="exp-company">🏢 CAPGEMINI — VALMET PROJECT</span>
+      <span class="exp-date">2022-present</span>
+    </div>
+    <div class="exp-role">⚔️ SOFTWARE ENGINEER — PUNE</div>
+    <ul class="exp-points">
+      <li>Built and maintained CRM & SRM intranet applications using Java, Spring Boot and microservices.</li>
+      <li>Provided technical support using ServiceNow for incident management and ticket resolution.</li>
+      <li>Handled production issues and optimized backend performance using SQL Server, MySQL and PostgreSQL.</li>
+      <li>Reduced system-related issues by 40% through cross-functional collaboration and process improvements.</li>
+      <li>Followed Agile methodologies with JIRA and GIT for task tracking and version control.</li>
+      <li>Maintained detailed documentation and ensured application stability across Windows and Linux platforms.</li>
+    </ul>
+    <div class="exp-tags">
+      <span class="exp-tag">JAVA</span>
+      <span class="exp-tag">SPRING BOOT</span>
+      <span class="exp-tag">MICROSERVICES</span>
+      <span class="exp-tag">POSTGRESQL</span>
+      <span class="exp-tag">MYSQL</span>
+      <span class="exp-tag">SERVICENOW</span>
+      <span class="exp-tag">JIRA</span>
+      <span class="exp-tag">GIT</span>
+      <span class="exp-tag">AGILE</span>
+    </div>
+  </div>
+
+</div>
+</section>
+
 <section id="projects">
 <h2>PROJECTS</h2>
 <div class="project-grid">
